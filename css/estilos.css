@@ -1,0 +1,265 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#grilla{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 17% 7% 68% 8%;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "section"
+    "footer";
+    grid-row-gap: 7px;
+}
+header{
+    background-color: white;
+    background-position: center;
+    grid-area: header;
+    
+}
+#tituloUno{
+    color: goldenrod;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: lighter;
+    text-align: center;
+}
+nav{
+    grid-area: nav;
+}
+#menu{
+    background-color: teal;
+    height: 100%;
+}
+#menuDos{
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%  ;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+}
+#menuDos li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.fondoMenu{
+    position:relative;
+    background-color: teal;
+}
+.fondoMenu:hover{
+    background-color:goldenrod;
+}
+#listaDos{
+    position: absolute;
+    display: none
+}
+ul ul li{
+    display: block;
+    width: 100%;
+}
+ul li:hover #listaDos{
+    display: block;
+    width: 200px;
+    padding: 0;
+}
+section{
+    background-image: url(../imagenes/plantas2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    grid-area: section;
+    align-content: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#slogan{
+    padding-right: 100px;
+    padding-top: 150px;
+    margin-right: 50px;
+    height: 200px;
+    width: 450px;
+}
+#frase{
+    color: rgba(218, 165, 32, 0.801);
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: lighter;
+    text-align: center;
+    
+}
+footer{
+    background:grey;
+    grid-area: footer;
+}
+#foot p{
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+#galeria{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#fotoUno{
+    
+    height:300px;
+    width: 300px;
+    overflow: hidden;
+    transition: all 2s;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#fotoDos{
+    height:300px;
+    width: 300px;
+    overflow: hidden;
+    transition: all 2s;
+}
+#fotoUno:hover{
+    width: 500px;
+    height: 400px;
+}
+#fotoDos:hover{
+    width: 500px;
+    height: 400px;
+}
+
+#tituloContact,#comentario{
+    font-family: 'Playfair Display', serif;
+    color: goldenrod;
+    text-align: left;
+    padding-left: 10px;
+}
+
+ol,tr, #datos,#formulario{
+    color: black; 
+    font-family: 'Montserrat', serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+}
+#contenedorDatos,#contenedorForm{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+#tituloContact{
+    padding-right: 30px;
+    padding-left: 35px;
+}
+#datos{
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}
+#comentario{
+    padding-right: 50px;
+    padding-top: 90px;
+}
+#formulario{
+    padding-right: 100px;
+}
+
+@media only screen and (max-width: 486px){
+
+    #grilla{
+        grid-template-columns:  100% ;
+        grid-template-rows:  20% 30% 70% 10%;
+    }
+    #menuDos{
+        
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+    #frase{
+        color: rgba(218, 165, 32, 0.801);
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+    }
+    section{
+        background-image: url(../imagenes/plantas.jpg);
+        background-size: 100vh;
+        background-repeat: no-repeat;
+
+    }
+    #slogan{
+        padding-right: 0;
+        padding-left: 50px;
+        padding-top: 250px;
+        margin-right: 50px;
+        height: 200px;
+        width: 450px;
+    }
+}
+#cards{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+#cardUno,#cardDos,#cardTres{
+    background-color: rgba(128, 128, 128, 0.829);
+    display: inline;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.cardP{
+    color: white;
+}
+
+@media only screen and (max-width: 320px){
+    header{
+        grid-area: nav;
+    }
+    nav{
+        grid-area: header;
+    }
+    #grilla{
+        grid-template-columns:  100% ;
+        grid-template-rows:  30% 20% 70% 10%;
+    }
+    #menuDos{
+        
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+    #frase{
+        color: rgba(218, 165, 32, 0.801);
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+    }
+    section{
+        background-image: url(../imagenes/plantas.jpg);
+        background-size: 100vh;
+        background-repeat: no-repeat;
+
+    }
+    #slogan{
+        padding-right: 0;
+        padding-left: 50px;
+        padding-top: 250px;
+        margin-right: 50px;
+        height: 200px;
+        width: 450px;
+    }
+}
